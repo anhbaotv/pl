@@ -40,36 +40,74 @@ body { font-family: Arial, sans-serif; margin:0; padding:20px; background:#f8f8f
 
 <script>
 // ================================
-// Thêm sản phẩm mới tại đây
+// Dữ liệu 5 sản phẩm đầy đủ
 // ================================
 const productData=[
   {
     name:"TV Box X96 Max",
     price:"1.250.000₫",
-    desc:"Android 12 • RAM 4GB • Chip Amlogic S905X4",
+    desc:"Android 12 • RAM 4GB • Chip Amlogic S905X4 • Hỗ trợ 4K HDR",
     media:[
       {type:"img", src:"https://lh3.googleusercontent.com/d/1JjcCe8IyEi4RackMsL3R7MEgakZouPrE=w1000"},
       {type:"img", src:"https://lh3.googleusercontent.com/d/17qEI95JEUr2EcqEY043t0-dcv_-dNo-q=w1000"},
       {type:"video", src:"https://www.w3schools.com/html/mov_bbb.mp4"}
     ],
     buyLink:"https://zalo.me/0947730363",
-    detailLink:"#"
+    detailLink:"https://sites.google.com/view/anhbaotv/x96-max"
   },
   {
     name:"TV Box Linpech A1",
     price:"1.100.000₫",
-    desc:"Android 11 • RAM 2GB • Chip Amlogic S905W2",
+    desc:"Android 11 • RAM 2GB • Chip Amlogic S905W2 • Kết nối Wifi 2.4G/5G",
     media:[
       {type:"img", src:"https://lh3.googleusercontent.com/d/1h0ysUxcgYajWc9iZSX4bWJUY3unPb5hG=w1000"},
       {type:"img", src:"https://lh3.googleusercontent.com/d/1zLrXB9oj9cupRNiQ3HuhlpNswYdsTvwo=w1000"},
       {type:"video", src:"https://www.w3schools.com/html/movie.mp4"}
     ],
     buyLink:"https://zalo.me/0947730363",
+    detailLink:"https://sites.google.com/view/anhbaotv/linpech-a1"
+  },
+  {
+    name:"TV Box Mini Z1",
+    price:"950.000₫",
+    desc:"Android 10 • RAM 2GB • Chip Amlogic S905X3 • Nhỏ gọn dễ đặt",
+    media:[
+      {type:"img", src:"https://via.placeholder.com/280x180?text=Mini+Z1+1"},
+      {type:"img", src:"https://via.placeholder.com/280x180?text=Mini+Z1+2"},
+      {type:"video", src:"https://www.w3schools.com/html/mov_bbb.mp4"}
+    ],
+    buyLink:"https://zalo.me/0947730363",
+    detailLink:"https://sites.google.com/view/anhbaotv/mini-z1"
+  },
+  {
+    name:"TV Box Pro 4K",
+    price:"1.500.000₫",
+    desc:"Android 12 • RAM 4GB • Chip Amlogic S922X • Hỗ trợ HDR10+",
+    media:[
+      {type:"img", src:"https://via.placeholder.com/280x180?text=Pro+4K+1"},
+      {type:"img", src:"https://via.placeholder.com/280x180?text=Pro+4K+2"},
+      {type:"video", src:"https://www.w3schools.com/html/movie.mp4"}
+    ],
+    buyLink:"#",
+    detailLink:"#"
+  },
+  {
+    name:"TV Box Ultra X",
+    price:"1.800.000₫",
+    desc:"Android 12 • RAM 6GB • Chip Amlogic S922X-H • Phát 4K HDR mượt",
+    media:[
+      {type:"img", src:"https://via.placeholder.com/280x180?text=Ultra+X+1"},
+      {type:"img", src:"https://via.placeholder.com/280x180?text=Ultra+X+2"},
+      {type:"video", src:"https://www.w3schools.com/html/mov_bbb.mp4"}
+    ],
+    buyLink:"#",
     detailLink:"#"
   }
 ];
 
+// ================================
 // Render sản phẩm
+// ================================
 const container=document.getElementById("productContainer");
 productData.forEach(product=>{
   const card=document.createElement("div");
@@ -108,6 +146,7 @@ productData.forEach(product=>{
   });
 });
 
+// Lightbox click để đóng
 document.getElementById("lightbox").addEventListener("click",()=>{
   document.getElementById("lightbox").style.display="none";
 });
